@@ -52,6 +52,27 @@ public class Controlador extends HttpServlet {
                 request.setAttribute("datos", datos);
                 request.getRequestDispatcher("RegistrosUsu.jsp").forward(request, response);
                 break;
+            case "Nuevo":
+                request.getRequestDispatcher("registrar.jsp").forward(request, response);
+                break;
+            case "Registrar":
+                String id = request.getParameter("txtid");
+                String nombre = request.getParameter("txtnombre");
+                String apellido = request.getParameter("txtapellido");
+                String correo = request.getParameter("txtcorreo");
+                String cargo = request.getParameter("txtcargo");
+                String contraseña = request.getParameter("txtcontrasena");
+                String direccion = request.getParameter("txtdireccion");
+                us.setId(id);
+                us.setNombre(nombre);
+                us.setApellido(apellido);
+                us.setCorreo(correo);
+                us.setCargo(cargo);
+                us.setContraseña(contraseña);
+                us.setDireccion(direccion);
+                dao.agregar(us);
+                request.getRequestDispatcher("Controlador?accion=Listar").forward(request, response);
+                break;
             default:
                 throw new AssertionError();
         }
