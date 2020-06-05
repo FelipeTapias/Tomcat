@@ -147,21 +147,20 @@
                    <td style="text-align: center;">${dato.getContraseña()}</td>   
                    <td style="text-align: center;">${dato.getDireccion()}</td>   
                    <td style="text-align: center;">
-                       <form>
-                           <input type="submit" value="Editar">
+                       <form action="Controlador" method="POST">
+                           <input type="hidden" name="id" value="${dato.getId()}">
+                           <input type="submit" name="accion" value="Editar">
                        </form>
                    </td> 
                    <td style="text-align: center;">
-                       <form>
-                           <input type="submit" value="Eliminar">
+                       <form action="Controlador" method="POST">
+                           <input type="hidden" name="id" value="${dato.getId()}">
+                           <input type="submit" name="accion" value="Delete">
                        </form>
-                   </td>                    
-                </tr>
-               </c:forEach>  
-            </tbody>
-        </table>
-    </div>
-</body>
+                   </td>
+               </tr>
+              </c:forEach>   
+            </body>
 </center>      
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
