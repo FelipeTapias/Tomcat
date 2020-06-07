@@ -129,7 +129,6 @@
                     <th>NOMBRE</th>
                     <th>APELLIDO</th>
                     <th>CORREO</th>
-                    <th>CARGO</th>
                     <th>CONTRASEÑA</th>
                     <th>DIRECCION</th>
                     <th>ACCIONES</th>
@@ -143,7 +142,6 @@
                    <td style="text-align: center;">${dato.getNombre()}</td>   
                    <td style="text-align: center;">${dato.getApellido()}</td>   
                    <td style="text-align: center;">${dato.getCorreo()}</td>   
-                   <td style="text-align: center;">${dato.getCargo()}</td>   
                    <td style="text-align: center;">${dato.getContraseña()}</td>   
                    <td style="text-align: center;">${dato.getDireccion()}</td>   
                    <td style="text-align: center;">

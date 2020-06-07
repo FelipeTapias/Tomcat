@@ -101,8 +101,8 @@
 
                     <select name="txtcargo" id="inputs" class="form-input" required>
                         <option disabled selected>Selecciona un cargo</option>
-                        <option value="Enfermera">Enfermera</option> 
-                        <option value="Familiar">Familiar</option>
+                        <option value="1">Enfermera</option> 
+                        <option value="2">Familiar</option>
                     </select>
 
                     <input type="password" id="inputs" class="form-input" placeholder="Contraseña" required name="txtcontrasena">

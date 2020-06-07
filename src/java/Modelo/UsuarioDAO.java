@@ -81,7 +81,7 @@ public class UsuarioDAO implements Validar{
    }
    public int actualizar(Usuario us){
        int r = 0;
-       String sql = "update usuario set nombre=?,apellido=?,correo=?,cargo=?,contraseña=?,direccion=?"
+       String sql = "update usuario set nombre=?,apellido=?,correo=?,contraseña=?,direccion=?"
                   + " where id=?";
        try {
            con = c.conectar();
@@ -89,10 +89,9 @@ public class UsuarioDAO implements Validar{
            ps.setString(1, (us.getNombre()));
            ps.setString(2, (us.getApellido()));
            ps.setString(3, (us.getCorreo()));
-           ps.setString(4, (us.getCargo()));
-           ps.setString(5, (us.getContraseña()));
-           ps.setString(6, (us.getDireccion()));
-           ps.setString(7, (us.getId()));
+           ps.setString(4, (us.getContraseña()));
+           ps.setString(5, (us.getDireccion()));
+           ps.setString(6, (us.getId()));
            r = ps.executeUpdate();
            if (r == 1) {
                r = 1;
@@ -118,23 +117,25 @@ public class UsuarioDAO implements Validar{
     @Override
     public int validar(Usuario us) {
         int r = 0;
-        String sql = "select * from usuario where correo=? and contraseña=?";
+        String sql = "select * from usuario where id=? and contraseña=? and cargo=?";
         try {
             con = c.conectar();
             ps = con.prepareStatement(sql);
-            ps.setString(1, us.getCorreo());
+            ps.setString(1, us.getId());
             ps.setString(2, us.getContraseña());
+            ps.setString(3, us.getCargo());
             rs = ps.executeQuery();
             while (rs.next()) {
-                r=r+1;
-                us.setCorreo(rs.getString("correo"));
+                us.setId(rs.getString("id"));
                 us.setContraseña(rs.getString("contraseña"));
+                us.setCargo(rs.getString("cargo"));
+                if((rs.getString("cargo").equals("1"))){
+                    r=r+1;
+                }else{
+                    r=r+2;
+                }
             }
-            if (r==1) {
-                return 1;
-            }else{
-                return 0;
-            }
+            return r;
         } catch (Exception e) {
             return 0;
         }

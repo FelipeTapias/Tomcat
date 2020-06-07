@@ -6,6 +6,7 @@ import Modelo.UsuarioDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -74,14 +75,12 @@ public class Controlador extends HttpServlet {
                 String nombre1 = request.getParameter("txtnombre");
                 String apellido1 = request.getParameter("txtapellido");
                 String correo1 = request.getParameter("txtcorreo");
-                String cargo1 = request.getParameter("txtcargo");
                 String contraseña1 = request.getParameter("txtcontrasena");
                 String direccion1 = request.getParameter("txtdireccion");
                 us.setId(id1);
                 us.setNombre(nombre1);
                 us.setApellido(apellido1);
                 us.setCorreo(correo1);
-                us.setCargo(cargo1);
                 us.setContraseña(contraseña1);
                 us.setDireccion(direccion1);
                 dao.actualizar(us);
@@ -93,19 +92,30 @@ public class Controlador extends HttpServlet {
                 request.getRequestDispatcher("Controlador?accion=Listar").forward(request, response);
                 break;
             case "Ingresar":
-                String correol = request.getParameter("txtcorreo");
-                String contraseñal = request.getParameter("txtcontrasena");
-                us.setCorreo(correol);
+                String idl = request.getParameter("txtid");
+                String contraseñal = request.getParameter("txtcontrasena"); 
+                String cargo1 = request.getParameter("txtcargo");
+                us.setId(idl);
                 us.setContraseña(contraseñal);
+                us.setCargo(cargo1);
                 r=dao.validar(us);
-                if ((correol.equalsIgnoreCase("admin@gmail.com") && contraseñal.equals("admin"))){
+               
+                if ((idl.equalsIgnoreCase("adminId") && contraseñal.equals("adminId") && cargo1.equals("3"))){
                     request.getRequestDispatcher("admin.jsp").forward(request, response);
                 }
                 if (r == 1) {
                     request.getRequestDispatcher("enfermerapri.html").forward(request, response);
+                    System.out.println("cargo" + cargo1);
                     System.out.println("Datos buenos");
-                }else{
-                    request.getRequestDispatcher("login.jsp").forward(request, response);
+                }if(r==2){
+                    request.getRequestDispatcher("familiarpri.html").forward(request, response);
+                    System.out.println("cargo" + cargo1);
+                    System.out.println("Datos buenos");
+                }
+                else{
+                    RequestDispatcher dd=request.getRequestDispatcher("login.jsp");
+                    dd.forward(request, response);
+                    System.out.println("cargo" + cargo1);
                     System.out.println("Datos erroneos");
                 }
                 break;
