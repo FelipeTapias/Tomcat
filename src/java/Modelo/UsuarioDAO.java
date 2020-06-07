@@ -29,6 +29,7 @@ public class UsuarioDAO implements Validar{
                us.setCargo(rs.getString(5));
                us.setContraseña(rs.getString(6));
                us.setDireccion(rs.getString(7));
+               us.setApellido2(rs.getString(8));
                lista.add(us);
             }
         } catch (Exception e) {
@@ -37,7 +38,7 @@ public class UsuarioDAO implements Validar{
     }
     public int agregar(Usuario us) {
      int r=0;
-     String sql="insert into usuario(id,nombre,apellido,correo,cargo,contraseña,direccion) values(?,?,?,?,?,?,?)";
+     String sql="insert into usuario(id,nombre,apellido,correo,cargo,contraseña,direccion,apellido2) values(?,?,?,?,?,?,?,?)";
         try {
            con = c.conectar();
            ps = con.prepareStatement(sql);
@@ -48,6 +49,7 @@ public class UsuarioDAO implements Validar{
            ps.setString(5, us.getCargo());
            ps.setString(6, us.getContraseña());
            ps.setString(7, us.getDireccion());
+           ps.setString(8, us.getApellido2());
            r = ps.executeUpdate();
             if (r == 1) {
                 r = 1;
@@ -74,6 +76,7 @@ public class UsuarioDAO implements Validar{
                us.setCargo(rs.getString(5));
                us.setContraseña(rs.getString(6));
                us.setDireccion(rs.getString(7));
+               us.setApellido2(rs.getString(8));
            }
        } catch (Exception e) {
        }
@@ -81,7 +84,7 @@ public class UsuarioDAO implements Validar{
    }
    public int actualizar(Usuario us){
        int r = 0;
-       String sql = "update usuario set nombre=?,apellido=?,correo=?,contraseña=?,direccion=?"
+       String sql = "update usuario set nombre=?,apellido=?,correo=?,contraseña=?,direccion=?,apellido2=?"
                   + " where id=?";
        try {
            con = c.conectar();
@@ -91,7 +94,8 @@ public class UsuarioDAO implements Validar{
            ps.setString(3, (us.getCorreo()));
            ps.setString(4, (us.getContraseña()));
            ps.setString(5, (us.getDireccion()));
-           ps.setString(6, (us.getId()));
+           ps.setString(6, (us.getApellido2()));
+           ps.setString(7, (us.getId()));
            r = ps.executeUpdate();
            if (r == 1) {
                r = 1;

@@ -94,7 +94,9 @@
                 <div class="contenedor-inputs">
                     <input type="text" id="inputs" class="input-48" placeholder="Nombre" required name="txtnombre" value="${usuario.getNombre()}">
 
-                    <input type="text" id="inputs" class="input-48" placeholder="Apellido" required name="txtapellido" value="${usuario.getApellido()}">
+                    <input type="text" id="inputs" class="input-48" placeholder="Primer apellido" required name="txtapellido" value="${usuario.getApellido()}">
+                    
+                    <input type="text" id="inputs" class="input-48" placeholder="Segundo apellido" required name="txtapellido2" value="${usuario.getApellido2()}">
 
                     <input type="email" id="inputs" class="form-input" placeholder="Correo" required name="txtcorreo" value="${usuario.getCorreo()}">
 

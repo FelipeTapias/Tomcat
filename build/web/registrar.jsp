@@ -93,9 +93,11 @@
             <form class="form-register" action="Controlador" method="POST">
                 <h2 class="form-title">C<span>rea una cuenta</span></h2>
                 <div class="contenedor-inputs">
-                    <input type="text" id="inputs" class="input-48" placeholder="Nombre" required name="txtnombre">
+                    <input type="text" id="inputs" class="form-input" placeholder="Nombre" required name="txtnombre">
 
-                    <input type="text" id="inputs" class="input-48" placeholder="Apellido" required name="txtapellido">
+                    <input type="text" id="inputs" class="input-48" placeholder="Primer apellido" required name="txtapellido">
+                    
+                    <input type="text" id="inputs" class="input-48" placeholder="Segundo apellido" required name="txtapellido2">
 
                     <input type="email" id="inputs" class="form-input" placeholder="Correo" required name="txtcorreo">
 

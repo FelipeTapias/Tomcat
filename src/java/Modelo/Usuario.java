@@ -6,6 +6,7 @@ public class Usuario {
     String id;
     String nombre;
     String apellido;
+    String apellido2;
     String correo;
     String cargo;
     String contraseña;
@@ -14,10 +15,11 @@ public class Usuario {
     public Usuario() {
     }
 
-    public Usuario(String id, String nombre, String apellido, String correo, String cargo, String contraseña, String direccion) {
+    public Usuario(String id, String nombre, String apellido, String apellido2, String correo, String cargo, String contraseña, String direccion) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
+        this.apellido2 = apellido2;
         this.correo = correo;
         this.cargo = cargo;
         this.contraseña = contraseña;
@@ -46,6 +48,14 @@ public class Usuario {
 
     public void setApellido(String apellido) {
         this.apellido = apellido;
+    }
+
+    public String getApellido2() {
+        return apellido2;
+    }
+
+    public void setApellido2(String apellido2) {
+        this.apellido2 = apellido2;
     }
 
     public String getCorreo() {
@@ -79,7 +89,7 @@ public class Usuario {
     public void setDireccion(String direccion) {
         this.direccion = direccion;
     }
-    
+
     
     
 }

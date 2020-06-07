@@ -38,6 +38,8 @@ public class Controlador extends HttpServlet {
             throws ServletException, IOException {
         String accion = request.getParameter("accion");
         switch (accion) {
+            case "Inicio":
+                request.getRequestDispatcher("index.html").forward(request, response);
             case "Listar":
                 List<Usuario>datos = dao.listar();
                 request.setAttribute("datos", datos);
@@ -54,6 +56,7 @@ public class Controlador extends HttpServlet {
                 String cargo = request.getParameter("txtcargo");
                 String contraseña = request.getParameter("txtcontrasena");
                 String direccion = request.getParameter("txtdireccion");
+                String apellido2 = request.getParameter("txtapellido2");
                 us.setId(id);
                 us.setNombre(nombre);
                 us.setApellido(apellido);
@@ -61,8 +64,9 @@ public class Controlador extends HttpServlet {
                 us.setCargo(cargo);
                 us.setContraseña(contraseña);
                 us.setDireccion(direccion);
+                us.setApellido2(apellido2);
                 dao.agregar(us);
-                request.getRequestDispatcher("Controlador?accion=Listar").forward(request, response);
+                request.getRequestDispatcher("index.html").forward(request, response);
                 break;
             case "Editar":
                 String ide = request.getParameter("id");
@@ -77,12 +81,14 @@ public class Controlador extends HttpServlet {
                 String correo1 = request.getParameter("txtcorreo");
                 String contraseña1 = request.getParameter("txtcontrasena");
                 String direccion1 = request.getParameter("txtdireccion");
+                String apellido21 = request.getParameter("txtapellido2");
                 us.setId(id1);
                 us.setNombre(nombre1);
                 us.setApellido(apellido1);
                 us.setCorreo(correo1);
                 us.setContraseña(contraseña1);
                 us.setDireccion(direccion1);
+                us.setApellido2(apellido21);
                 dao.actualizar(us);
                 request.getRequestDispatcher("Controlador?accion=Listar").forward(request, response);
                 break;

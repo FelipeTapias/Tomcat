@@ -49,22 +49,20 @@
 	<![endif]-->
         <style>
           table {
-            width: 40%;
+            width: 55%;
             border: 1px solid #999;
             text-align: center;
             border-collapse: collapse;
             margin: 0 0 1em 0;
             caption-side: top;
+            text-align: center;
    
-        }
-
-        td, th {
-           padding: 0.3em;
         }
         
         th, td {
           border-bottom: 1px solid #999;
-          width: 25%;
+          text-align: center;
+          
         }
         </style>
 
@@ -127,12 +125,13 @@
                 <tr>
                     <th>ID</th>
                     <th>NOMBRE</th>
-                    <th>APELLIDO</th>
+                    <th>PRIMER APELLIDO</th>
+                    <th>SEGUNDO APELLIDO</th>
                     <th>CORREO</th>
                     <th>CONTRASEÑA</th>
                     <th>DIRECCION</th>
-                    <th>ACCIONES</th>
-                    <th>ACCIONES</th>
+                    <th></th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -141,6 +140,7 @@
                    <td style="text-align: center;">${dato.getId()}</td>   
                    <td style="text-align: center;">${dato.getNombre()}</td>   
                    <td style="text-align: center;">${dato.getApellido()}</td>   
+                   <td style="text-align: center;">${dato.getApellido2()}</td>   
                    <td style="text-align: center;">${dato.getCorreo()}</td>   
                    <td style="text-align: center;">${dato.getContraseña()}</td>   
                    <td style="text-align: center;">${dato.getDireccion()}</td>   
