@@ -16,22 +16,12 @@ public class Controlador extends HttpServlet {
     
     UsuarioDAO dao = new UsuarioDAO();
     Usuario us = new Usuario();
+    int r;
  
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet Controlador</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet Controlador at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
-        }
+       
     }
 
    
@@ -101,6 +91,26 @@ public class Controlador extends HttpServlet {
                 String id2 = request.getParameter("id");
                 dao.delete(id2);
                 request.getRequestDispatcher("Controlador?accion=Listar").forward(request, response);
+                break;
+            case "Ingresar":
+                String correol = request.getParameter("txtcorreo");
+                String contraseñal = request.getParameter("txtcontrasena");
+                us.setCorreo(correol);
+                us.setContraseña(contraseñal);
+                r=dao.validar(us);
+                if ((correol.equalsIgnoreCase("admin@gmail.com") && contraseñal.equals("admin"))){
+                    request.getRequestDispatcher("admin.jsp").forward(request, response);
+                }
+                if (r == 1) {
+                    request.getRequestDispatcher("enfermerapri.html").forward(request, response);
+                    System.out.println("Datos buenos");
+                }else{
+                    request.getRequestDispatcher("login.jsp").forward(request, response);
+                    System.out.println("Datos erroneos");
+                }
+                break;
+            case "Salir":
+                request.getRequestDispatcher("index.html").forward(request, response);
                 break;
             default:
                 throw new AssertionError();

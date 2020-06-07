@@ -1,14 +1,15 @@
-<!DOCTYPE HTML>
-<!--
-  Cube by FreeHTML5.co
-  Twitter: http://twitter.com/gettemplateco
-  URL: http://freehtml5.co
--->
-<html>
-  <head>
+<%-- 
+    Document   : admin
+    Created on : 5/06/2020, 11:15:26 AM
+    Author     : atapias
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Principal enfermera</title>
+  <title>Administrador</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Free HTML5 Website Template by FreeHTML5.co" />
   <meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
@@ -88,7 +89,7 @@
               <div class="display-tc">
                 <div class="row">
                   <div class="col-md-7 copy animate-box">
-                    <h1><strong>Hola enfermera! que gusto tenerte de nuevo.</strong></h1>
+                    <h1><strong>Hola Administrador! que gusto tenerte de nuevo.</strong></h1>
                   </div>
                 </div>
               </div>
@@ -191,4 +192,3 @@
 
   </body>
 </html>
-

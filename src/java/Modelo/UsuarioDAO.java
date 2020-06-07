@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 
 
-public class UsuarioDAO {
+public class UsuarioDAO implements Validar{
     PreparedStatement ps;
     ResultSet rs;
     Conexion c = new Conexion();
@@ -114,4 +114,29 @@ public class UsuarioDAO {
            System.out.println("ERRORRRRRRRRRRRRRRRRRRRRRRRRRR");
        }
    }
+
+    @Override
+    public int validar(Usuario us) {
+        int r = 0;
+        String sql = "select * from usuario where correo=? and contraseña=?";
+        try {
+            con = c.conectar();
+            ps = con.prepareStatement(sql);
+            ps.setString(1, us.getCorreo());
+            ps.setString(2, us.getContraseña());
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                r=r+1;
+                us.setCorreo(rs.getString("correo"));
+                us.setContraseña(rs.getString("contraseña"));
+            }
+            if (r==1) {
+                return 1;
+            }else{
+                return 0;
+            }
+        } catch (Exception e) {
+            return 0;
+        }
+    }
 }
