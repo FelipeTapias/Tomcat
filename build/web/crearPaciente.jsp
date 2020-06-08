@@ -51,7 +51,7 @@
                         <div class="col-xs-10 text-right menu-1">
                             <ul>
                                 <li><a href="index.html">Inicio</a></li>
-                                <li><a href="login.jsp">Iniciar Sesión</a></li>
+                                <li><a href="admin.jsp">Volver</a></li>
                             </ul>
                         </div>
                     </div>
@@ -90,7 +90,7 @@
                             id
             -->
 
-            <form class="form-register" action="Controlador" method="POST">
+            <form class="form-register" action="ControladorPa" method="POST">
                 <h2 class="form-title">C<span>rear nuevo paciente</span></h2>
                 <div class="contenedor-inputs">
                     <input type="text" id="inputs" class="form-input" placeholder="Nombre" required name="txtnombre">

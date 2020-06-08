@@ -1,6 +1,6 @@
 <%-- 
-    Document   : añadirPaciente
-    Created on : 7/06/2020, 03:54:56 AM
+    Document   : editarPaciente
+    Created on : 7/06/2020, 08:38:34 PM
     Author     : atapias
 --%>
 
@@ -10,10 +10,9 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Crear paciente</title>
+        <title>Editar paciente</title>
 
         <!-- Animate.css -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <link rel="stylesheet" href="css/animate.css">
         <!-- Icomoon Icon Fonts-->
         <link rel="stylesheet" href="css/icomoon.css">
@@ -51,7 +50,7 @@
                         <div class="col-xs-10 text-right menu-1">
                             <ul>
                                 <li><a href="index.html">Inicio</a></li>
-                                <li><a href="admin.jsp">Volver</a></li>
+                                <li><a href="enfermerapri.html">Volver</a></li>
                             </ul>
                         </div>
                     </div>
@@ -67,8 +66,8 @@
                                 <div class="display-tc">
                                     <div class="row">
                                         <div class="col-md-8 animate-box">
-                                            <h1 class="no-margin"><strong>Crear nuevo paciente</strong></h1>
-                                            <p>Crea un nuevo paciente desde esta página.</p>
+                                            <h1 class="no-margin"><strong>Editar paciente</strong></h1>
+                                            <p>Podrás editar todo tipo de cuenta.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -91,17 +90,17 @@
             -->
 
             <form class="form-register" action="ControladorPa" method="POST">
-                <h2 class="form-title">C<span>rear nuevo paciente</span></h2>
+                <h2 class="form-title">E<span>ditar paciente</span></h2>
                 <div class="contenedor-inputs">
-                    <input type="text" id="inputs" class="form-input" placeholder="Nombre" required name="txtnombre">
+                    <input type="text" id="inputs" class="form-input" placeholder="Nombre" required name="txtnombre" value="${paciente.getNombre()}">
 
-                    <input type="text" id="inputs" class="input-48" placeholder="Primer apellido" required name="txtapellido">
+                    <input type="text" id="inputs" class="input-48" placeholder="Primer apellido" required name="txtapellido" value="${paciente.getApellido()}">
                     
-                    <input type="text" id="inputs" class="input-48" placeholder="Segundo apellido" required name="txtapellido2">
+                    <input type="text" id="inputs" class="input-48" placeholder="Segundo apellido" required name="txtapellido2" value="${paciente.getApellido2()}">
 
-                    <input type="text" id="inputs" class="form-input" placeholder="Identificación" required name="txtid">
+                    <input type="text" id="inputs" class="form-input" placeholder="Id" required name="txtid" value="${paciente.getId()}">
 
-                    <input type="submit" class="btn-submit" value="Registrar" name="accion">
+                    <input type="submit" class="btn-submit" value="Actualizar" name="accion">
                 </div>
             </form>
             <br>

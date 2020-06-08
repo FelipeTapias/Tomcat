@@ -1,10 +1,8 @@
-
 package Controlador;
 
 import Modelo.Usuario;
 import Modelo.UsuarioDAO;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -22,7 +20,6 @@ public class Controlador extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-       
     }
 
    

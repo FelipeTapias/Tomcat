@@ -95,7 +95,7 @@
 							<div class="display-tc">
 								<div class="row">
 									<div class="col-md-8 animate-box">
-										<h1 class="no-margin"><strong>Rgistrados en ChequeaMed</strong></h1>
+										<h1 class="no-margin"><strong>Registrados en ChequeaMed</strong></h1>
 										<p>Recuerda que puedes: editar y eliminar usuarios.</p>
 									</div>
 								</div>

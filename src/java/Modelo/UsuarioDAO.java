@@ -31,8 +31,10 @@ public class UsuarioDAO implements Validar{
                us.setDireccion(rs.getString(7));
                us.setApellido2(rs.getString(8));
                lista.add(us);
+                System.out.println("Lista: " + lista);
             }
         } catch (Exception e) {
+            System.out.println("Todo malo");
         }
         return lista;
     }

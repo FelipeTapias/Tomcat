@@ -4,6 +4,7 @@
     Author     : atapias
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -109,8 +110,8 @@
 		
 <center>
     <div>
-    <h1 class="no-margin"><strong>Registrados</strong></h1>
-    <form action="Controlador" method="POST">
+    <h1 class="no-margin"><strong>Registrados </strong></h1>
+    <form action="ControladorPa" method="POST">
     <input type="search" id="miBusqueda" name="q">
     <a href="" onClick= return><input type="button" value="Buscar"></a><br><br>
     <input type="submit" name="accion" value="Listar">
@@ -118,7 +119,8 @@
 	</form>
     </div>
 	<br>
-	<div>   
+	<div>  
+            
         <table>
             <thead>
                 <tr>
@@ -131,26 +133,26 @@
                 </tr>
             </thead>
             <tbody>
-              <c:forEach var="dato" items="${datos}"> 	
+                <c:forEach var="dato" items="${datos}">
                <tr>    
                    <td style="text-align: center;">${dato.getId()}</td>   
                    <td style="text-align: center;">${dato.getNombre()}</td>   
                    <td style="text-align: center;">${dato.getApellido()}</td>   
                    <td style="text-align: center;">${dato.getApellido2()}</td>   
                    <td style="text-align: center;">
-                       <form action="Controlador" method="POST">
+                       <form action="ControladorPa" method="POST">
                            <input type="hidden" name="id" value="${dato.getId()}">
                            <input type="submit" name="accion" value="Editar">
                        </form>
                    </td> 
                    <td style="text-align: center;">
-                       <form action="Controlador" method="POST">
+                       <form action="ControladorPa" method="POST">
                            <input type="hidden" name="id" value="${dato.getId()}">
                            <input type="submit" name="accion" value="Delete">
                        </form>
                    </td>
                </tr>
-              </c:forEach>   
+               </c:forEach>
             </body>
 </center>      
 	<!-- jQuery -->

@@ -1,10 +1,9 @@
 <%-- 
-    Document   : RegistrosUsu
-    Created on : 1/06/2020, 12:58:31 AM
+    Document   : verPacientesAdmin
+    Created on : 8/06/2020, 01:03:14 AM
     Author     : atapias
 --%>
 
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -12,7 +11,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">	
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Lista de registros</title>
+	<title>Lista de pacientes</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Free HTML5 Website Template by FreeHTML5.co" />
 	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
@@ -81,7 +80,6 @@
 					<div class="col-xs-10 text-right menu-1">
 						<ul>
 							<li><a href="index.html">Inicio</a></li>
-							<li><a href="enfermerapri.html">Volver</a></li>
 						</ul>
 					</div>
 				</div>	
@@ -95,8 +93,8 @@
 							<div class="display-tc">
 								<div class="row">
 									<div class="col-md-8 animate-box">
-										<h1 class="no-margin"><strong>Registrados en ChequeaMed</strong></h1>
-										<p>Recuerda que puedes: editar y eliminar usuarios.</p>
+										<h1 class="no-margin"><strong>Pacientes registrados en ChequeaMed</strong></h1>
+										<p>Recuerda que puedes: editar y eliminar pacientes.</p>
 									</div>
 								</div>
 							</div>
@@ -110,8 +108,8 @@
 		
 <center>
     <div>
-    <h1 class="no-margin"><strong>Registrados</strong></h1>
-    <form action="Controlador" method="POST">
+    <h1 class="no-margin"><strong>Registrados </strong></h1>
+    <form action="ControladorPa" method="POST">
     <input type="search" id="miBusqueda" name="q">
     <a href="" onClick= return><input type="button" value="Buscar"></a><br><br>
     <input type="submit" name="accion" value="Listar">
@@ -119,7 +117,8 @@
 	</form>
     </div>
 	<br>
-	<div>   
+	<div>  
+            
         <table>
             <thead>
                 <tr>
@@ -127,37 +126,31 @@
                     <th>NOMBRE</th>
                     <th>PRIMER APELLIDO</th>
                     <th>SEGUNDO APELLIDO</th>
-                    <th>CORREO</th>
-                    <th>CONTRASEÑA</th>
-                    <th>DIRECCION</th>
                     <th></th>
                     <th></th>
                 </tr>
             </thead>
             <tbody>
-              <c:forEach var="dato" items="${datos}"> 	
+                <c:forEach var="dato" items="${datos}">
                <tr>    
                    <td style="text-align: center;">${dato.getId()}</td>   
                    <td style="text-align: center;">${dato.getNombre()}</td>   
                    <td style="text-align: center;">${dato.getApellido()}</td>   
                    <td style="text-align: center;">${dato.getApellido2()}</td>   
-                   <td style="text-align: center;">${dato.getCorreo()}</td>   
-                   <td style="text-align: center;">${dato.getContraseña()}</td>   
-                   <td style="text-align: center;">${dato.getDireccion()}</td>   
                    <td style="text-align: center;">
-                       <form action="Controlador" method="POST">
+                       <form action="ControladorPa" method="POST">
                            <input type="hidden" name="id" value="${dato.getId()}">
                            <input type="submit" name="accion" value="Editar">
                        </form>
                    </td> 
                    <td style="text-align: center;">
-                       <form action="Controlador" method="POST">
+                       <form action="ControladorPa" method="POST">
                            <input type="hidden" name="id" value="${dato.getId()}">
                            <input type="submit" name="accion" value="Delete">
                        </form>
                    </td>
                </tr>
-              </c:forEach>   
+               </c:forEach>
             </body>
 </center>      
 	<!-- jQuery -->

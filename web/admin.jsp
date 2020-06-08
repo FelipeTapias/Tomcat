@@ -109,31 +109,9 @@
             <p>Recuerda que en esta sesión puedes elegir las diferentes opciones que tiene ChequeaMed.</p>
           </div>
         </div>
-        <div class="row row-pb-md">
+        <div class="row row-pb-md">   
           <div class="col-md-4 col-sm-4">
-            <a href="añadirpaciente.html" class="gtco-item two-row bg-img animate-box" style="background-image: url(images/img_1.jpg)">
-              <div class="overlay">
-                <i class="ti-arrow-top-right"></i>
-                <div class="copy">
-                  <h3>Añadir nuevo paciente</h3>
-                  <p>Te ayudaremos a crear un nuevo paciente para tu lista.</p>
-                </div>
-              </div>
-              <img src="images/img_1.jpg" class="hidden" alt="Free HTML5 Website Template by FreeHTML5.co">
-            </a>
-            <a href="cambiohorario.html" class="gtco-item two-row bg-img animate-box" style="background-image: url(images/img_2.jpg)">
-              <div class="overlay">
-                <i class="ti-arrow-top-right"></i>
-                <div class="copy">
-                  <h3>Cambiar hoarario de turno</h3>
-                  <p>Deseo cambiar mis horarios de turno.</p>
-                </div>
-              </div>
-              <img src="images/img_2.jpg" class="hidden" alt="xdxd">
-            </a>
-          </div>
-          <div class="col-md-4 col-sm-4">
-            <a href="verpacientes.html" class="gtco-item one-row bg-img animate-box" style="background-image: url(images/img_md_1.jpg)">
+            <a href="verPacientesAdmin.jsp" class="gtco-item one-row bg-img animate-box" style="background-image: url(images/img_md_1.jpg)">
               <div class="overlay">
                 <i class="ti-arrow-top-right"></i>
                 <div class="copy">
@@ -144,29 +122,39 @@
               <img src="images/img_md_1.jpg" class="hidden" alt="Free HTML5 Website Template by FreeHTML5.co">
             </a>
           </div>
-          <div class="col-md-4 col-sm-4">
-            <a href="reporte.html" class="gtco-item two-row bg-img animate-box" style="background-image: url(images/img_3.jpg)">
+            <div class="col-md-4 col-sm-4">
+            <a href="crearPaciente.jsp" class="gtco-item two-row bg-img animate-box" style="background-image: url(images/img_1.jpg)">
+              <div class="overlay">
+                <i class="ti-arrow-top-right"></i>
+                <div class="copy">
+                  <h3>Crear nuevo paciente</h3>
+                  <p>Te ayudaremos a crear un nuevo paciente para tu lista.</p>
+                </div>
+              </div>
+              <img src="images/img_1.jpg" class="hidden" alt="Free HTML5 Website Template by FreeHTML5.co">
+            </a>
+            <a href="#" class="gtco-item two-row bg-img animate-box" style="background-image: url(images/img_2.jpg)">
               <div class="overlay">
                 <i class="ti-arrow-top-right"></i>
                 <div class="copy">
                   <h3>Ver reporte</h3>
-                  <p>Aquí podrás observar los reportes</p>
+                  <p>Aquí podrás observar los reportes.</p>
                 </div>
               </div>
-              <img src="images/img_3.jpg" class="hidden" alt="Free HTML5 Website Template by FreeHTML5.co">
+              <img src="images/img_2.jpg" class="hidden" alt="xdxd">
             </a>
-
-              <a href="RegistrosUsu.jsp" class="gtco-item two-row bg-img animate-box" style="background-image: url(images/img_4.jpg)">
+          </div>
+          <div class="col-md-4 col-sm-4">
+            <a href="RegistrosUsu.jsp" class="gtco-item one-row bg-img animate-box" style="background-image: url(images/img_md_1.jpg)">
               <div class="overlay">
                 <i class="ti-arrow-top-right"></i>
                 <div class="copy">
-                  <h3>Ver usuarios</h3>
-                  <p>Aquí podrás ver todos los usuarios que se han registrado</p>
+                  <h3>Ver lista de usuarios</h3>
+                  <p>Aquí podrás observar a todos los usuarios.</p>
                 </div>
               </div>
-              <img src="images/img_4.jpg" class="hidden" alt="Free HTML5 Website Template by FreeHTML5.co">
+              <img src="images/img_md_1.jpg" class="hidden" alt="Free HTML5 Website Template by FreeHTML5.co">
             </a>
-            
           </div>
         </div>
       </div>
