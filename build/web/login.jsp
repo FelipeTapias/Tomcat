@@ -47,6 +47,12 @@
             .btn-submit {
                 margin: auto;
             }
+            
+            .relleno {
+                margin-bottom: 100px;
+                margin-top: 100px;
+                background-color: white;
+            }
         </style>
 
     </head>
@@ -86,7 +92,6 @@
                                     <div class="row">
                                         <div class="col-md-8 animate-box">
                                             <h1 class="no-margin">Iniciar Sesión</h1>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia facilis, accusamus iusto animi.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -103,7 +108,7 @@
             <form class="form-register" action="Controlador" method="POST">
                 <h2 class="form-title">I<span>nicia sesión</span></h2>
                 <div class="contenedor-inputs">
-                    <input type="text" id="inputs" class="input-48" placeholder="Id" name="txtid" required>
+                    <input type="text" id="inputs" class="input-48" placeholder="Identificación" name="txtid" required>
                     <input type="password" id="inputs" class="input-48" placeholder="Contraseña" name="txtcontrasena" required>
                     <select name="txtcargo" id="inputs" class="form-input" required>
                         <option disabled selected>Selecciona un cargo</option>
@@ -115,6 +120,10 @@
                 </div>
             </form>
             <br>
+            <div class="relleno">
+                
+                
+            </div>
 
 
 
