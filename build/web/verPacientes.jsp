@@ -64,6 +64,16 @@
           text-align: center;
           
         }
+        
+        .acabado {
+            margin-bottom: 100px;
+            margin-top: 100px;
+            background-color: red;
+        }
+        
+        #p {
+            color: white;
+        }
         </style>
 
 	</head>
@@ -109,6 +119,7 @@
 
 		
 <center>
+   
     <div>
     <h1 class="no-margin"><strong>Registrados </strong></h1>
     <form action="ControladorPa" method="POST">
@@ -121,6 +132,7 @@
 	<br>
 	<div>  
             
+            
         <table>
             <thead>
                 <tr>
@@ -128,6 +140,7 @@
                     <th>NOMBRE</th>
                     <th>PRIMER APELLIDO</th>
                     <th>SEGUNDO APELLIDO</th>
+                    <th></th>
                     <th></th>
                     <th></th>
                 </tr>
@@ -149,6 +162,12 @@
                        <form action="ControladorPa" method="POST">
                            <input type="hidden" name="id" value="${dato.getId()}">
                            <input type="submit" name="accion" value="Delete">
+                       </form>
+                   </td>
+                   <td style="text-align: center;">
+                       <form>
+                           <input type="hidden" >
+                           <a href="medicamentos.html"><input value="Administrar medicamento"></a>
                        </form>
                    </td>
                </tr>

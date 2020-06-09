@@ -8,6 +8,10 @@
         <servlet-name>ControladorPa</servlet-name>
         <servlet-class>Controlador.ControladorPa</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ControladorFa</servlet-name>
+        <servlet-class>Controlador.ControladorFa</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Controlador</servlet-name>
         <url-pattern>/Controlador</url-pattern>
@@ -15,6 +19,10 @@
     <servlet-mapping>
         <servlet-name>ControladorPa</servlet-name>
         <url-pattern>/ControladorPa</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ControladorFa</servlet-name>
+        <url-pattern>/ControladorFa</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -90,19 +90,20 @@
             </header>
             <!-- END #gtco-header -->
 
-
-
             <div class="gtco-section">
                 <div class="gtco-container">
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2 gtco-heading text-center">
-                            <h2>Completa el formulario</h2>
                             <div>
-                                <form class="form-register" action="ControladorPa" method="POST">
+                                <div class="espacio">
+                                    <h3  class="espacio">Para añadir a tu familiar, ingresa los siguientes datos</h3>
+                                </div>
+                                <form class="form-register" action="ControladorFa" method="POST">
                                     <h2 class="form-title"><span>Añadir familiar</span></h2>
                                     <div class="contenedor-inputs">
-                                        <input type="text" id="inputs" class="form-input" placeholder="Identificación" required name="txtid">
-                                        <input type="submit" class="btn-submit" value="Registrar" name="accion">
+                                        <input type="text" id="inputs" class="form-input" placeholder="Identificación de tu familiar" required name="txtidf">
+                                        <input type="text" id="inputs" class="form-input" placeholder="Tu identificación" required name="txtid">
+                                        <input type="submit" class="btn-submit" value="Añadir" name="accion">
                                     </div>
                                 </form>
                             </div>

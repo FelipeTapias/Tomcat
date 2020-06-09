@@ -1,5 +1,7 @@
 package Controlador;
 
+import Modelo.Paciente;
+import Modelo.PacienteDAO;
 import Modelo.Usuario;
 import Modelo.UsuarioDAO;
 import java.io.IOException;
@@ -10,26 +12,25 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
 public class Controlador extends HttpServlet {
-    
+
     UsuarioDAO dao = new UsuarioDAO();
     Usuario us = new Usuario();
+    Paciente pa = new Paciente();
+    PacienteDAO daop = new PacienteDAO();
     int r;
- 
+
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
     }
 
-   
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
     }
 
-  
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -38,7 +39,7 @@ public class Controlador extends HttpServlet {
             case "Inicio":
                 request.getRequestDispatcher("index.html").forward(request, response);
             case "Listar":
-                List<Usuario>datos = dao.listar();
+                List<Usuario> datos = dao.listar();
                 request.setAttribute("datos", datos);
                 request.getRequestDispatcher("RegistrosUsu.jsp").forward(request, response);
                 break;
@@ -96,27 +97,27 @@ public class Controlador extends HttpServlet {
                 break;
             case "Ingresar":
                 String idl = request.getParameter("txtid");
-                String contraseñal = request.getParameter("txtcontrasena"); 
+                String contraseñal = request.getParameter("txtcontrasena");
                 String cargo1 = request.getParameter("txtcargo");
                 us.setId(idl);
                 us.setContraseña(contraseñal);
                 us.setCargo(cargo1);
-                r=dao.validar(us);
-               
-                if ((idl.equalsIgnoreCase("adminId") && contraseñal.equals("adminId") && cargo1.equals("3"))){
+                r = dao.validar(us);
+
+                if ((idl.equalsIgnoreCase("adminId") && contraseñal.equals("adminId") && cargo1.equals("3"))) {
                     request.getRequestDispatcher("admin.jsp").forward(request, response);
                 }
                 if (r == 1) {
                     request.getRequestDispatcher("enfermerapri.html").forward(request, response);
                     System.out.println("cargo" + cargo1);
                     System.out.println("Datos buenos");
-                }if(r==2){
+                }
+                if (r == 2) {
                     request.getRequestDispatcher("familiarpri.html").forward(request, response);
                     System.out.println("cargo" + cargo1);
                     System.out.println("Datos buenos");
-                }
-                else{
-                    RequestDispatcher dd=request.getRequestDispatcher("login.jsp");
+                } else {
+                    RequestDispatcher dd = request.getRequestDispatcher("datosErroneos.jsp");
                     dd.forward(request, response);
                     System.out.println("cargo" + cargo1);
                     System.out.println("Datos erroneos");
@@ -130,7 +131,6 @@ public class Controlador extends HttpServlet {
         }
     }
 
-     
     @Override
     public String getServletInfo() {
         return "Short description";

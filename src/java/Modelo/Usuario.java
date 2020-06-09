@@ -89,7 +89,7 @@ public class Usuario {
     public void setDireccion(String direccion) {
         this.direccion = direccion;
     }
-
-    
     
 }
+
+
