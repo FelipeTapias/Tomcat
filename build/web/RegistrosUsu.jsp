@@ -56,14 +56,17 @@
             margin: 0 0 1em 0;
             caption-side: top;
             text-align: center;
-   
         }
         
         th, td {
           border-bottom: 1px solid #999;
-          text-align: center;
-          
+          text-align: center; 
         }
+        
+         #barra{
+                 position: fixed;
+                 padding-bottom: 10px;
+             }
         </style>
 
 	</head>
@@ -72,7 +75,7 @@
 	<div class="gtco-loader"></div>
 	
 	<div id="page">
-		<nav class="gtco-nav" role="navigation">
+            <nav class="gtco-nav" role="navigation" id="barra">
 			<div class="gtco-container">	
 				<div class="row">
 					<div class="col-sm-2 col-xs-12">
@@ -87,7 +90,7 @@
 				</div>	
 			</div>
 		</nav>
-		<header id="gtco-header" class="gtco-cover gtco-cover-xs gtco-inner" role="banner">
+		<header id="gtco-header" class="gtco-cover gtco-cover-xs gtco-inner" role="banner" style="height: 300px">
 			<div class="gtco-container">
 				<div class="row">
 					<div class="col-md-12 col-md-offset-0 text-left">
@@ -95,8 +98,8 @@
 							<div class="display-tc">
 								<div class="row">
 									<div class="col-md-8 animate-box">
-										<h1 class="no-margin"><strong>Registrados en ChequeaMed</strong></h1>
-										<p>Recuerda que puedes: editar y eliminar usuarios.</p>
+										<h1 class="no-margin" style="position: relative; bottom: 80px; left: 40px;"><strong>Registrados en ChequeaMed</strong></h1>
+										<h3 style="color: white; position: relative; bottom: 70px; left: 40px;">Recuerda que puedes: editar y eliminar usuarios.</h3>
 									</div>
 								</div>
 							</div>
@@ -107,6 +110,7 @@
 		</header>
         </div>
 
+      
 		
 <center>
     <div>
@@ -131,7 +135,6 @@
                     <th>CONTRASEÑA</th>
                     <th>DIRECCION</th>
                     <th></th>
-                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -148,11 +151,6 @@
                        <form action="Controlador" method="POST">
                            <input type="hidden" name="id" value="${dato.getId()}">
                            <input type="submit" name="accion" value="Editar">
-                       </form>
-                   </td> 
-                   <td style="text-align: center;">
-                       <form action="Controlador" method="POST">
-                           <input type="hidden" name="id" value="${dato.getId()}">
                            <input type="submit" name="accion" value="Delete">
                        </form>
                    </td>

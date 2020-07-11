@@ -18,12 +18,17 @@
 	 <!-- Theme style  -->
 	 <link rel="stylesheet" href="css/style.css">
 	 <script src="js/modernizr-2.6.2.min.js"></script>
+         <style>
+             #barra {
+                 position: fixed;
+             }
+         </style>
 	</head>
 
 <body>	
 	<div class="gtco-loader"></div>
 	<div id="page">
-		<nav class="gtco-nav" role="navigation">
+            <nav class="gtco-nav" role="navigation" id="barra">
 			<div class="gtco-container">
 				<div class="row">
 					<div class="col-sm-2 col-xs-12">
@@ -48,11 +53,11 @@
 							<div class="display-tc">
 								<div class="row">
 									<div class="col-md-5 text-center header-img animate-box">
-										<img src="images/LogoChe.jpg" alt="Medicamentos" width="300" height="225">
+										<img src="images/LogoChe.jpg" alt="Error" width="300" height="225" style=" bottom: -200px;">
 									</div>
 									<div class="col-md-7 copy animate-box">
-										<h1><strong>¡Oops!</strong></h1>
-										<p>Ha ocurrido un error, por favor revisa tus datos.</p>
+										<h1 style="position: relative; bottom: -40px; left: 40px;"><strong>¡Oops!</strong></h1>
+										<h3 style="color: white; position: relative; bottom: -40px; left: 40px;">Ha ocurrido un error, por favor revisa tus datos.</h3>
 									</div>
 								</div>
 							</div>

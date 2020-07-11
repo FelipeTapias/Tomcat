@@ -43,6 +43,13 @@
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
+        
+        <style>
+            #barra {
+                 position: fixed;
+                 padding-bottom: 10px;
+            }
+        </style>
 
 	</head>
 	<body>
@@ -51,7 +58,7 @@
 	
 	<div id="page">
 
-		<nav class="gtco-nav" role="navigation">
+            <nav class="gtco-nav" role="navigation" id="barra">
 			<div class="gtco-container">
 				
 				<div class="row">
@@ -69,7 +76,7 @@
 			</div>
 		</nav>
 
-		<header id="gtco-header" class="gtco-cover gtco-cover-xs gtco-inner" role="banner">
+		<header id="gtco-header" class="gtco-cover gtco-cover-xs gtco-inner" role="banner" style="height: 300px">
 			<div class="gtco-container">
 				<div class="row">
 					<div class="col-md-12 col-md-offset-0 text-left">
@@ -77,8 +84,7 @@
 							<div class="display-tc">
 								<div class="row">
 									<div class="col-md-8 animate-box">
-										<h1 class="no-margin"><strong>Aquí tienes tu lista de familiares</strong></h1>
-										<p>Recuerda que puedes: editar y eliminar un paciente.</p>
+										<h1 class="no-margin" style="position: relative; bottom: 80px; left: 40px;"><strong>Aquí tienes tu lista de familiares</strong></h1>
 									</div>
 								</div>
 							</div>
@@ -112,8 +118,6 @@
                     <th>APELLIDO</th>
                     <th>FECHA DE NACIMIENTO</th>
                     <th>MEDICAMENTOS</th>
-                    <th>HISTORIA CLINICA</th>
-                    <th>CODIGO</th>
                     <th>ID</th>
                    </tr>
             </thead>
@@ -126,10 +130,7 @@
                    <td style="text-align: center;">Navarro</td>         
                    <td style="text-align: center;">12/03/2020</td>
                    <td style="text-align: center;">
-                   <a href="medicamentos.html" onClick= return><input type="button" value="Detallar"></td></a>
-                   <a href=""><td style="text-align: center;"></a>         
-                   <a href="clinicah.html" onClick= return><input type="button" value="Detallar"></td></a>
-                   <td style="text-align: center;">85bs8a</td> 
+                   <a href="medicamentos.html" onClick= return><input type="button" value="Detallar"></td>         
                    <td style="text-align: center;">1000758512</td>                  
                     
                  </tr>
@@ -141,10 +142,7 @@
                    <td style="text-align: center;">Gaviria</td>         
                    <td style="text-align: center;">19/10/2019</td>
                    <td style="text-align: center;">
-                    <a href="exitofamiliar.html" onClick= return><input type="button" value="Detallar"></td></a>
-                   <a href=""><td style="text-align: center;"></a>         
-                   <a href="exitofamiliar.html" onClick= return><input type="button" value="Detallar"></td></a>        
-                   <td style="text-align: center;">3k24j</td> 
+                    <a href="exitofamiliar.html" onClick= return><input type="button" value="Detallar"></td></a>       
                    <td style="text-align: center;">9025773304</td>                  
                     
                  </tr>

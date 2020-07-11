@@ -68,6 +68,11 @@
             #p {
                 color: white;
             }
+            
+            #barra {
+                position: fixed;
+                padding-bottom: 10px;
+            }
       
         </style>
 
@@ -78,7 +83,7 @@
 
         <div id="page">
 
-            <nav class="gtco-nav" role="navigation">
+            <nav class="gtco-nav" role="navigation" id="barra">
                 <div class="gtco-container">
 
                     <div class="row">
@@ -88,7 +93,7 @@
                         <div class="col-xs-10 text-right menu-1">
                             <ul>
                                 <li><a href="index.html">Inicio</a></li>
-                                <li><a href="verPacientes.html">Volver</a></li>
+                                <li><a href="verPacientes.jsp">Volver</a></li>
                             </ul>
                         </div>
                     </div>
@@ -96,7 +101,7 @@
                 </div>
             </nav>
 
-            <header id="gtco-header" class="gtco-cover gtco-cover-xs gtco-inner" role="banner">
+            <header id="gtco-header" class="gtco-cover gtco-cover-xs gtco-inner" role="banner" style="height: 400px">
                 <div class="gtco-container">
                     <div class="row">
                         <div class="col-md-12 col-md-offset-0 text-left">
@@ -112,15 +117,8 @@
                         </div>
                     </div>
                 </div>
-            </header>	
+            </header>
             <center>
-
-                <div class="acabado" style="background-color: red">
-
-                    <p id="p">En construcción, disculpe las molestias causadas.</p>    
-
-                </div>
-
                 <div>
 
                     <h1 class="no-margin"><strong>Lista</strong></h1>

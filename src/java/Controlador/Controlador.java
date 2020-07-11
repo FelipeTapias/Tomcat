@@ -64,7 +64,7 @@ public class Controlador extends HttpServlet {
                 us.setDireccion(direccion);
                 us.setApellido2(apellido2);
                 dao.agregar(us);
-                request.getRequestDispatcher("index.html").forward(request, response);
+                request.getRequestDispatcher("login.jsp").forward(request, response);
                 break;
             case "Editar":
                 String ide = request.getParameter("id");

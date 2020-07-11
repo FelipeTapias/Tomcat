@@ -30,6 +30,78 @@
         <!-- Modernizr JS -->
         <script src="js/modernizr-2.6.2.min.js"></script>
 
+        <style>
+            .btn-submit {
+                margin: auto;
+            }
+            
+            .relleno {
+                margin-bottom: 100px;
+                margin-top: 100px;
+                background-color: white;
+            }
+            
+            #form-lora3 {
+                    margin: auto;
+                    width: 150%;
+                    height: 400px;
+                    max-width: 900px;
+                    max-height: 800px;
+                    background: #3dcdbc;
+                    border-radius: 10px;
+            
+            }
+            .form-title3 {
+            background: #33a2bd;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 5px solid white;
+    font-family: sans-serif;
+    color: white;
+}
+
+#inputs3 {
+    margin-bottom: 15px;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 3px;
+    border: 1px solid orange;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid white;
+    color: #fff;
+    font-family: sans-serif;
+    background: #33a2bd;
+}
+
+.btn-submit3 {
+    color: #fff;
+    font-family: sans-serif;
+    margin: auto;
+    padding: 10px 40px;
+    font-size: 17px;
+    transition: all .3s ease;
+    cursor: pointer;
+    background: #154360;
+    border: none;
+    outline: none;
+}
+
+.btn-submit3:hover {
+    background: #f29718;
+    border: groove darkgoldenrod;
+}
+
+.espacio {
+    margin-bottom: 100px;
+}
+
+ #barra{
+                 position: fixed;
+                 padding-bottom: 10px;
+             }
+
+</style>
 
     </head>
 
@@ -39,7 +111,7 @@
 
         <div id="page">
 
-            <nav class="gtco-nav" role="navigation">
+            <nav class="gtco-nav" role="navigation" id="barra">
                 <div class="gtco-container">
 
                     <div class="row">
@@ -59,7 +131,7 @@
                 </div>
             </nav>
 
-            <header id="gtco-header" class="gtco-cover gtco-cover-xs gtco-inner" role="banner">
+            <header id="gtco-header" class="gtco-cover gtco-cover-xs gtco-inner" role="banner" style="height: 300px">
                 <div class="gtco-container">
                     <div class="row">
                         <div class="col-md-12 col-md-offset-0 text-left">
@@ -67,8 +139,8 @@
                                 <div class="display-tc">
                                     <div class="row">
                                         <div class="col-md-8 animate-box">
-                                            <h1 class="no-margin"><strong>Crear nuevo paciente</strong></h1>
-                                            <p>Crea un nuevo paciente desde esta página.</p>
+                                            <h1 class="no-margin" style="position: relative; bottom: 80px; left: 40px;"><strong>Crear nuevo paciente</strong></h1>
+                                            <h3 style="color: white; position: relative; bottom: 70px; left: 40px;">Crea un nuevo paciente desde esta página.</h3>
                                         </div>
                                     </div>
                                 </div>
@@ -90,18 +162,18 @@
                             id
             -->
 
-            <form class="form-register" action="ControladorPa" method="POST">
-                <h2 class="form-title">C<span>rear nuevo paciente</span></h2>
+            <form id="form-lora3" action="ControladorPa" method="POST">
+                <h2 class="form-title3">C<span>rear nuevo paciente</span></h2>
                 <div class="contenedor-inputs">
-                    <input type="text" id="inputs" class="form-input" placeholder="Nombre" required name="txtnombre">
+                    <input type="text" id="inputs3" class="form-input" placeholder="Nombre" required name="txtnombre">
 
-                    <input type="text" id="inputs" class="input-48" placeholder="Primer apellido" required name="txtapellido">
+                    <input type="text" id="inputs3" class="input-48" placeholder="Primer apellido" required name="txtapellido">
                     
-                    <input type="text" id="inputs" class="input-48" placeholder="Segundo apellido" required name="txtapellido2">
+                    <input type="text" id="inputs3" class="input-48" placeholder="Segundo apellido" required name="txtapellido2">
 
-                    <input type="text" id="inputs" class="form-input" placeholder="Identificación" required name="txtid">
+                    <input type="text" id="inputs3" class="form-input" placeholder="Identificación" required name="txtid">
 
-                    <input type="submit" class="btn-submit" value="Registrar" name="accion">
+                    <input type="submit" class="btn-submit3" value="Registrar" name="accion">
                 </div>
             </form>
             <br>

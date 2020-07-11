@@ -28,6 +28,64 @@
 
         <!-- Modernizr JS -->
         <script src="js/modernizr-2.6.2.min.js"></script>
+        
+        <style>
+            #barra {
+                position: fixed;
+                padding-bottom: 10px;
+            }
+            
+            #form-lora {
+                    margin: auto;
+                    width: 150%;
+                    height: 400px;
+                    max-width: 900px;
+                    max-height: 1000px;
+                    background: #3dcdbc;
+                    border-radius: 10px;
+            
+            }
+            .form-title2 {
+            background: #33a2bd;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 5px solid white;
+    font-family: sans-serif;
+    color: white;
+}
+
+#inputs2 {
+    margin-bottom: 15px;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 3px;
+    border: 1px solid orange;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid white;
+    color: #fff;
+    font-family: sans-serif;
+    background: #33a2bd;
+}
+
+.btn-submit2 {
+    color: #fff;
+    font-family: sans-serif;
+    margin: auto;
+    padding: 10px 40px;
+    font-size: 17px;
+    transition: all .3s ease;
+    cursor: pointer;
+    background: #154360;
+    border: none;
+    outline: none;
+}
+
+.btn-submit2:hover {
+    background: #f29718;
+    border: groove darkgoldenrod;
+}
+        </style>
 
 
     </head>
@@ -38,7 +96,7 @@
 
         <div id="page">
 
-            <nav class="gtco-nav" role="navigation">
+            <nav class="gtco-nav" role="navigation" id="barra">
                 <div class="gtco-container">
 
                     <div class="row">
@@ -58,7 +116,7 @@
                 </div>
             </nav>
 
-            <header id="gtco-header" class="gtco-cover gtco-cover-xs gtco-inner" role="banner">
+            <header id="gtco-header" class="gtco-cover gtco-cover-xs gtco-inner" role="banner" style="height: 300px">
                 <div class="gtco-container">
                     <div class="row">
                         <div class="col-md-12 col-md-offset-0 text-left">
@@ -66,8 +124,8 @@
                                 <div class="display-tc">
                                     <div class="row">
                                         <div class="col-md-8 animate-box">
-                                            <h1 class="no-margin"><strong>Editar paciente</strong></h1>
-                                            <p>Podrás editar todo tipo de cuenta.</p>
+                                            <h1 class="no-margin" style="position: relative; bottom: 80px; left: 40px;"><strong>Editar paciente</strong></h1>
+                                            <h3 style="color: white; position: relative; bottom: 70px; left: 40px;">Podrás editar todo tipo de cuenta.</h3>
                                         </div>
                                     </div>
                                 </div>
@@ -89,18 +147,18 @@
                             id
             -->
 
-            <form class="form-register" action="ControladorPa" method="POST">
-                <h2 class="form-title">E<span>ditar paciente</span></h2>
+            <form id="form-lora" action="ControladorPa" method="POST">
+                <h2 class="form-title2">E<span>ditar paciente</span></h2>
                 <div class="contenedor-inputs">
-                    <input type="text" id="inputs" class="form-input" placeholder="Nombre" required name="txtnombre" value="${paciente.getNombre()}">
+                    <input type="text" id="inputs2" class="form-input" placeholder="Nombre" required name="txtnombre" value="${paciente.getNombre()}">
 
-                    <input type="text" id="inputs" class="input-48" placeholder="Primer apellido" required name="txtapellido" value="${paciente.getApellido()}">
+                    <input type="text" id="inputs2" class="input-48" placeholder="Primer apellido" required name="txtapellido" value="${paciente.getApellido()}">
                     
-                    <input type="text" id="inputs" class="input-48" placeholder="Segundo apellido" required name="txtapellido2" value="${paciente.getApellido2()}">
+                    <input type="text" id="inputs2" class="input-48" placeholder="Segundo apellido" required name="txtapellido2" value="${paciente.getApellido2()}">
 
-                    <input type="text" id="inputs" class="form-input" placeholder="Id" required name="txtid" value="${paciente.getId()}">
+                    <input type="text" id="inputs2" class="form-input" placeholder="Identificación" required name="txtid" value="${paciente.getId()}">
 
-                    <input type="submit" class="btn-submit" value="Actualizar" name="accion">
+                    <input type="submit" class="btn-submit2" value="Actualizar" name="accion">
                 </div>
             </form>
             <br>

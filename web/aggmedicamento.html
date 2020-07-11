@@ -29,14 +29,70 @@
 
         <style>
             .acabado {
-                margin-bottom: 100px;
-                margin-top: 100px;
                 background-color: red;
             }
 
             #p {
                 color: white;
             }
+            
+            #barra {
+                 position: fixed;
+                 padding-bottom: 10px;
+            }
+            
+            
+            #form-lora4 {
+                    margin: auto;
+                    width: 150%;
+                    height: 400px;
+                    max-width: 900px;
+                    max-height: 1000px;
+                    background: #3dcdbc;
+                    border-radius: 10px;
+            
+            }
+            .form-title4 {
+            background: #33a2bd;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 5px solid white;
+    font-family: sans-serif;
+    color: white;
+}
+
+#inputs4 {
+    margin-bottom: 15px;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 3px;
+    border: 1px solid orange;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid white;
+    color: #fff;
+    font-family: sans-serif;
+    background: #33a2bd;
+}
+
+.btn-submit4 {
+    color: #fff;
+    font-family: sans-serif;
+    margin: auto;
+    padding: 10px 40px;
+    font-size: 17px;
+    transition: all .3s ease;
+    cursor: pointer;
+    background: #154360;
+    border: none;
+    outline: none;
+}
+
+.btn-submit4:hover {
+    background: #f29718;
+    border: groove darkgoldenrod;
+}
+
         </style>
 
 
@@ -47,7 +103,7 @@
 
         <div id="page">
 
-            <nav class="gtco-nav" role="navigation">
+            <nav class="gtco-nav" role="navigation" id="barra">
                 <div class="gtco-container">
 
                     <div class="row">
@@ -65,7 +121,7 @@
                 </div>
             </nav>
 
-            <header id="gtco-header" class="gtco-cover gtco-cover-xs gtco-inner" role="banner">
+            <header id="gtco-header" class="gtco-cover gtco-cover-xs gtco-inner" role="banner" style="height: 300px">
                 <div class="gtco-container">
                     <div class="row">
                         <div class="col-md-12 col-md-offset-0 text-left">
@@ -73,7 +129,7 @@
                                 <div class="display-tc">
                                     <div class="row">
                                         <div class="col-md-8 animate-box">
-                                            <h1 class="no-margin"><strong>Agregar medicamento</strong></h1>
+                                            <h1 class="no-margin" style="position: relative; bottom: 80px; left: 40px;"><strong>Agregar medicamento</strong></h1>
                                         </div>
                                     </div>
                                 </div>
@@ -84,39 +140,31 @@
             </header>
             <!-- END #gtco-header -->
 
-            <center>
-                <div class="acabado" style="background-color: red">
-
-                    <p id="p">En construcción, disculpe las molestias causadas.</p>    
-
-                </div>
-
-            </center>
             <div class="gtco-section">
                 <div class="gtco-container">
                     <div class="row">
-                        <div class="col-md-8 col-md-offset-2 gtco-heading text-center">
-                            <h2>Completa el formulario</h2>
-                            <div>
-                                <form class="form-register" action="Controlador" method="POST">
+                        
+                                <div class="espacio">
+                                  <h3 class="espacio">Completa todos los campos</h3>
+                                 </div>
+                                <form id="form-lora4" action="Controlador" method="POST">
                                     <h2 class="form-title"><span>Agregar medicamento</span></h2>
                                     <div class="contenedor-inputs">
-                                        <input type="text" id="inputs" class="form-input" placeholder="Nombre" required name="txtnombre">
+                                        <input type="text" id="inputs4" class="form-input" placeholder="Nombre" required name="txtnombre">
 
-                                        <input type="text" id="inputs" class="input-48" placeholder="Dosis" required name="txtapellido">
+                                        <input type="text" id="inputs4" class="input-48" placeholder="Dosis" required name="txtapellido">
 
-                                        <input type="text" id="inputs" class="input-48" placeholder="Hora de suministro" required name="txtapellido2">
+                                        <input type="text" id="inputs4" class="input-48" placeholder="Hora de suministro" required name="txtapellido2">
 
-                                        <input type="email" id="inputs" class="form-input" placeholder="Frecuencia" required name="txtcorreo">
+                                        <input type="email" id="inputs4" class="form-input" placeholder="Frecuencia" required name="txtcorreo">
 
-                                        <input type="submit" class="btn-submit" value="Agregar" name="accion">
+                                        <input type="submit" class="btn-submit4" value="Agregar" name="accion">
                                     </div>
                                 </form>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
 
             <!-- jQuery -->

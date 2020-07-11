@@ -8,6 +8,12 @@
 <!DOCTYPE html>
 <html>
     <head>
+        
+        <style>
+             #barra{
+                 position: fixed;
+             }
+         </style>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Iniciar Sesión</title>
@@ -53,6 +59,61 @@
                 margin-top: 100px;
                 background-color: white;
             }
+            
+            .form-register {
+                    margin: auto;
+                    width: 100%;
+                    height: 350px;
+                    max-width: 800px;
+                    max-height: 1000px;
+                    background: #3dcdbc;
+                    border-radius: 10px;
+            
+            }
+            .form-title {
+            background: #33a2bd;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 5px solid white;
+    font-family: sans-serif;
+    color: #3dcdbc;
+}
+
+#inputs {
+    margin-bottom: 15px;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 3px;
+    border: 1px solid orange;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid white;
+    color: #fff;
+    font-family: sans-serif;
+    background: #33a2bd;
+}
+
+.btn-submit {
+    color: #fff;
+    font-family: sans-serif;
+    margin: auto;
+    padding: 10px 40px;
+    font-size: 17px;
+    transition: all .3s ease;
+    cursor: pointer;
+    background: #154360;
+    border: none;
+    outline: none;
+}
+
+.btn-submit:hover {
+    background: #f29718;
+    border: groove darkgoldenrod;
+}
+
+.espacio {
+    margin-bottom: 100px;
+}
         </style>
 
     </head>
@@ -63,7 +124,7 @@
 
         <div id="page">
 
-            <nav class="gtco-nav" role="navigation">
+            <nav class="gtco-nav" role="navigation" id="barra">
                 <div class="gtco-container">
 
                     <div class="row">
@@ -83,15 +144,16 @@
                 </div>
             </nav>
 
-            <header id="gtco-header" class="gtco-cover gtco-cover-xs gtco-inner" role="banner">
+            <header id="gtco-header" class="gtco-cover gtco-cover-xs gtco-inner" role="banner" style="height: 300px"> <!--id: Define el color-->
                 <div class="gtco-container">
                     <div class="row">
-                        <div class="col-md-12 col-md-offset-0 text-left">
-                            <div class="display-t">
-                                <div class="display-tc">
+                        <div>
+                            <div class="display-t"> <!--Letras del baner-->
+                                <div class="display-tc"> <!--Letras del baner-->
                                     <div class="row">
                                         <div class="col-md-8 animate-box">
-                                            <h1 class="no-margin">Iniciar Sesión</h1>
+                                            <h1 class="no-margin" style="position: relative; bottom: 80px; left: 40px;">Iniciar Sesión</h1>
+                                            <h3 class="no-margin" style="color: white; position: relative; bottom: 70px; left: 40px;"><strong>Para iniciar sesión, ingresa correctamente tus datos</strong></h3>
                                         </div>
                                     </div>
                                 </div>
@@ -106,7 +168,7 @@
             </div>
 
             <form class="form-register" action="Controlador" method="POST">
-                <h2 class="form-title">I<span>nicia sesión</span></h2>
+                <h2 class="form-title"><span>Iniciar sesión</span></h2>
                 <div class="contenedor-inputs">
                     <input type="text" id="inputs" class="input-48" placeholder="Identificación" name="txtid" required>
                     <input type="password" id="inputs" class="input-48" placeholder="Contraseña" name="txtcontrasena" required>

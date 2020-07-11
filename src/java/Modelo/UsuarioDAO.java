@@ -64,7 +64,7 @@ public class UsuarioDAO implements Validar {
         return r;
     }
     public Usuario listarId(String id) {
-        String sql = "select * from usuario where id=" + id;
+        String sql = "select * from usuario where id="+id;
         Usuario us = new Usuario();
         try {
             con = c.conectar();
@@ -112,8 +112,9 @@ public class UsuarioDAO implements Validar {
 
     public void delete(String id) {
         System.out.println("Este es el id:" + id);
-        String sql = "delete * from usuario where id=" + id;
+        String sql="delete from usuario where id="+id;
         try {
+            System.out.println("Este es el id2:" + id);
             con = c.conectar();
             ps = con.prepareStatement(sql);
             ps.executeUpdate();

@@ -95,7 +95,7 @@ public class PacienteDAO {
    }
    public void delete(String id){
        System.out.println("Este es el id:" + id);
-       String sql = "delete * from paciente where id="+id;
+       String sql = "delete from paciente where id="+id;
        try {
            con = c.conectar();
            ps = con.prepareStatement(sql);
