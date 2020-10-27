@@ -20,7 +20,7 @@
 	 <script src="js/modernizr-2.6.2.min.js"></script>
          <style>
              #barra {
-                 position: fixed;
+                 
              }
          </style>
 	</head>

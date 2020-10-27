@@ -144,7 +144,7 @@
                 </div>
             </nav>
 
-            <header id="gtco-header" class="gtco-cover gtco-cover-xs gtco-inner" role="banner" style="height: 300px"> <!--id: Define el color-->
+            <header id="gtco-header" class="gtco-cover gtco-cover-xs gtco-inner" role="banner" style="height: 400px"> <!--id: Define el color-->
                 <div class="gtco-container">
                     <div class="row">
                         <div>
@@ -152,8 +152,7 @@
                                 <div class="display-tc"> <!--Letras del baner-->
                                     <div class="row">
                                         <div class="col-md-8 animate-box">
-                                            <h1 class="no-margin" style="position: relative; bottom: 80px; left: 40px;">Iniciar Sesión</h1>
-                                            <h3 class="no-margin" style="color: white; position: relative; bottom: 70px; left: 40px;"><strong>Para iniciar sesión, ingresa correctamente tus datos</strong></h3>
+                                            <h1 style="padding-top: 160px"><strong>Iniciar sesión</strong></h1>
                                         </div>
                                     </div>
                                 </div>
@@ -181,6 +180,8 @@
                     <input type="submit" class="btn-submit" name="accion" value="Ingresar">  
                 </div>
             </form>
+            
+            
             <br>
             <div class="relleno">
                 

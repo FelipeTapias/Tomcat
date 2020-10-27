@@ -102,7 +102,7 @@
 				</div>	
 			</div>
 		</nav>
-		<header id="gtco-header" class="gtco-cover gtco-cover-xs gtco-inner" role="banner" style="height: 300px">
+		<header id="gtco-header" class="gtco-cover gtco-cover-xs gtco-inner" role="banner" style="height: 400px">
 			<div class="gtco-container">
 				<div class="row">
 					<div class="col-md-12 col-md-offset-0 text-left">
@@ -110,7 +110,7 @@
 							<div class="display-tc">
 								<div class="row">
 									<div class="col-md-8 animate-box">
-										<h1 class="no-margin" style="position: relative; bottom: 80px; left: 40px;"><strong>Pacientes registrados en ChequeaMed</strong></h1>
+										<h1 style="padding-top: 160px"><strong>Pacientes registrados</strong></h1>
 									</div>
 								</div>
 							</div>

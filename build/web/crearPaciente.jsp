@@ -131,7 +131,7 @@
                 </div>
             </nav>
 
-            <header id="gtco-header" class="gtco-cover gtco-cover-xs gtco-inner" role="banner" style="height: 300px">
+            <header id="gtco-header" class="gtco-cover gtco-cover-xs gtco-inner" role="banner" style="height: 400px">
                 <div class="gtco-container">
                     <div class="row">
                         <div class="col-md-12 col-md-offset-0 text-left">
@@ -139,8 +139,7 @@
                                 <div class="display-tc">
                                     <div class="row">
                                         <div class="col-md-8 animate-box">
-                                            <h1 class="no-margin" style="position: relative; bottom: 80px; left: 40px;"><strong>Crear nuevo paciente</strong></h1>
-                                            <h3 style="color: white; position: relative; bottom: 70px; left: 40px;">Crea un nuevo paciente desde esta página.</h3>
+                                            <h1 class="no-margin" style="position: relative; bottom: -150px; left: 40px;"><strong>Crear paciente</strong></h1>
                                         </div>
                                     </div>
                                 </div>

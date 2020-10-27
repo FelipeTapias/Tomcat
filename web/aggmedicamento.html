@@ -6,62 +6,78 @@
 -->
 <html>
     <head>
+        
+        <style>
+             #barra{
+                 position: fixed;
+             }
+         </style>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Agregar medicamento</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Free HTML5 Website Template by FreeHTML5.co" />
+        <meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
+        <meta name="author" content="FreeHTML5.co" />
+
+
 
         <!-- Animate.css -->
         <link rel="stylesheet" href="css/animate.css">
         <!-- Icomoon Icon Fonts-->
         <link rel="stylesheet" href="css/icomoon.css">
-
+        <!-- Themify Icons-->
+        <link rel="stylesheet" href="css/themify-icons.css">
         <!-- Bootstrap  -->
         <link rel="stylesheet" href="css/bootstrap.css">
 
         <!-- Magnific Popup -->
         <link rel="stylesheet" href="css/magnific-popup.css">
 
+        <!-- Owl Carousel  -->
+        <link rel="stylesheet" href="css/owl.carousel.min.css">
+        <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
         <!-- Theme style  -->
         <link rel="stylesheet" href="css/style.css">
 
         <!-- Modernizr JS -->
         <script src="js/modernizr-2.6.2.min.js"></script>
-
+        <!-- FOR IE9 below -->
+        <!--[if lt IE 9]>
+            <script src="js/respond.min.js"></script>
+            <![endif]-->
         <style>
-            .acabado {
-                background-color: red;
-            }
-
-            #p {
-                color: white;
+            .btn-submit {
+                margin: auto;
             }
             
-            #barra {
-                 position: fixed;
-                 padding-bottom: 10px;
+            .relleno {
+                margin-bottom: 100px;
+                margin-top: 100px;
+                background-color: white;
             }
             
-            
-            #form-lora4 {
+            .form-register {
                     margin: auto;
-                    width: 150%;
-                    height: 400px;
-                    max-width: 900px;
+                    width: 100%;
+                    height: 350px;
+                    max-width: 800px;
                     max-height: 1000px;
                     background: #3dcdbc;
                     border-radius: 10px;
             
             }
-            .form-title4 {
+            .form-title {
             background: #33a2bd;
     padding: 20px;
     text-align: center;
     border-bottom: 5px solid white;
     font-family: sans-serif;
-    color: white;
+    color: #3dcdbc;
 }
 
-#inputs4 {
+#inputs {
     margin-bottom: 15px;
     padding: 15px;
     font-size: 16px;
@@ -75,7 +91,7 @@
     background: #33a2bd;
 }
 
-.btn-submit4 {
+.btn-submit {
     color: #fff;
     font-family: sans-serif;
     margin: auto;
@@ -88,15 +104,18 @@
     outline: none;
 }
 
-.btn-submit4:hover {
+.btn-submit:hover {
     background: #f29718;
     border: groove darkgoldenrod;
 }
 
+.espacio {
+    margin-bottom: 100px;
+}
         </style>
 
-
     </head>
+
     <body>
 
         <div class="gtco-loader"></div>
@@ -108,12 +127,14 @@
 
                     <div class="row">
                         <div class="col-sm-2 col-xs-12">
-                            <div id="gtco-logo"><a href="index.html"><img src="images/LogoChe.jpg" alt="Logo" width="50"></a></div>
+                            <div id="gtco-logo">
+                                <a href="index.html"><img src="images/LogoChe.jpg" alt="Logo" width="50px"></a>
+                            </div>
                         </div>
                         <div class="col-xs-10 text-right menu-1">
                             <ul>
                                 <li><a href="index.html">Inicio</a></li>
-                                <li><a href="medicamentos.html">Cancelar</a></li>
+                                <li><a href="registrar.jsp">Registrarse</a></li>
                             </ul>
                         </div>
                     </div>
@@ -121,15 +142,15 @@
                 </div>
             </nav>
 
-            <header id="gtco-header" class="gtco-cover gtco-cover-xs gtco-inner" role="banner" style="height: 300px">
+            <header id="gtco-header" class="gtco-cover gtco-cover-xs gtco-inner" role="banner" style="height: 400px"> <!--id: Define el color-->
                 <div class="gtco-container">
                     <div class="row">
-                        <div class="col-md-12 col-md-offset-0 text-left">
-                            <div class="display-t">
-                                <div class="display-tc">
+                        <div>
+                            <div class="display-t"> <!--Letras del baner-->
+                                <div class="display-tc"> <!--Letras del baner-->
                                     <div class="row">
                                         <div class="col-md-8 animate-box">
-                                            <h1 class="no-margin" style="position: relative; bottom: 80px; left: 40px;"><strong>Agregar medicamento</strong></h1>
+                                            <h1 style="padding-top: 160px"><strong>Agregar medicamento</strong></h1>
                                         </div>
                                     </div>
                                 </div>
@@ -138,33 +159,39 @@
                     </div>
                 </div>
             </header>
-            <!-- END #gtco-header -->
 
-            <div class="gtco-section">
-                <div class="gtco-container">
-                    <div class="row">
-                        
-                                <div class="espacio">
-                                  <h3 class="espacio">Completa todos los campos</h3>
-                                 </div>
-                                <form id="form-lora4" action="Controlador" method="POST">
-                                    <h2 class="form-title"><span>Agregar medicamento</span></h2>
-                                    <div class="contenedor-inputs">
-                                        <input type="text" id="inputs4" class="form-input" placeholder="Nombre" required name="txtnombre">
+            <div class="espacio">
+                <h3 class="espacio">Completa todos los campos</h3>
+            </div>
 
-                                        <input type="text" id="inputs4" class="input-48" placeholder="Dosis" required name="txtapellido">
-
-                                        <input type="text" id="inputs4" class="input-48" placeholder="Hora de suministro" required name="txtapellido2">
-
-                                        <input type="email" id="inputs4" class="form-input" placeholder="Frecuencia" required name="txtcorreo">
-
-                                        <input type="submit" class="btn-submit4" value="Agregar" name="accion">
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
+            <form class="form-register" action="Controlador" method="POST">
+                <h2 class="form-title"><span>Agregar medicamento</span></h2>
+                <div class="contenedor-inputs">
+                    <input type="text" id="inputs" class="input-48" placeholder="Identificador" name="txtid" required>
+                    <input type="text" id="inputs" class="input-48" placeholder="Nombre" name="txtnombre" required>
+                    <select name="txtcargo" id="inputs" class="form-input" required>
+                        <option disabled selected>Vía de administración</option>
+                        <option value="1">Oral</option> 
+                        <option value="2">Intravenosa</option>
+                        <option value="3">Intramuscular</option>
+                        <option value="3">Subcutanea</option>
+                    </select>
+                    <input type="submit" class="btn-submit" name="accion" value="Agregar">  
                 </div>
+            </form>
+            
+            
+            <br>
+            <div class="relleno">
+                
+                
+            </div>
+
+
+
+
+
+
 
 
             <!-- jQuery -->
@@ -180,6 +207,11 @@
             <!-- Magnific Popup -->
             <script src="js/jquery.magnific-popup.min.js"></script>
             <script src="js/magnific-popup-options.js"></script>
+
+            <!-- Google Map -->
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script>
+            <script src="js/google_map.js"></script>
+
             <!-- Main -->
             <script src="js/main.js"></script>
 

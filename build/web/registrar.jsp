@@ -123,7 +123,7 @@
                 </div>
             </nav>
 
-            <header id="gtco-header" class="gtco-cover gtco-cover-xs gtco-inner" role="banner" style="height: 300px">
+            <header id="gtco-header" class="gtco-cover gtco-cover-xs gtco-inner" role="banner" style="height: 400px">
                 <div class="gtco-container">
                     <div class="row">
                         <div class="col-md-12 col-md-offset-0 text-left">
@@ -131,8 +131,7 @@
                                 <div class="display-tc">
                                     <div class="row">
                                         <div class="col-md-8 animate-box">
-                                            <h1 class="no-margin" style="position: relative; bottom: 80px; left: 40px;"><strong>Registrarse</strong></h1>
-                                            <h3 style="color: white; position: relative; bottom: 70px; left: 40px;">Crea tu cuenta para poder hacer uso de los sevicios que te ofrece ChequeaMed.</h3>
+                                            <h1 style="padding-top: 200px"><strong>Registrarse</strong></h1>
                                         </div>
                                     </div>
                                 </div>
@@ -178,7 +177,8 @@
                     <input type="text" id="inputs2" class="form-input" placeholder="Identificación" required name="txtid">
 
                     <input type="submit" class="btn-submit2" value="Registrar" name="accion">
-                    <p class="form-link">¿Ya tienes una cuenta? </p> <a href="#">Ingresa aquí</a>
+                    <p class="form-link">¿Ya tienes una cuenta? </p> 
+                    <a href="login.jsp" class="form-link">Ingresa aquí</a>
                 </div>
             </form>
             <br>

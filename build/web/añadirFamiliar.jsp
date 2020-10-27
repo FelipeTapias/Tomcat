@@ -45,65 +45,65 @@
         <!--[if lt IE 9]>
         <script src="js/respond.min.js"></script>
         <![endif]-->
-        
+
         <style>
             #barra {
                 position: fixed;
                 margin-bottom: 10px;
             }
-            
-            
-            
+
+
+
             #form-lora {
-                    margin: auto;
-                    width: 150%;
-                    height: 400px;
-                    max-width: 900px;
-                    max-height: 1000px;
-                    background: #3dcdbc;
-                    border-radius: 10px;
-            
+                margin: auto;
+                width: 150%;
+                height: 400px;
+                max-width: 900px;
+                max-height: 1000px;
+                background: #3dcdbc;
+                border-radius: 10px;
+
             }
             .form-title2 {
-            background: #33a2bd;
-    padding: 20px;
-    text-align: center;
-    border-bottom: 5px solid white;
-    font-family: sans-serif;
-    color: white;
-}
+                background: #33a2bd;
+                padding: 20px;
+                text-align: center;
+                border-bottom: 5px solid white;
+                font-family: sans-serif;
+                color: white;
+            }
 
-#inputs2 {
-    margin-bottom: 15px;
-    padding: 15px;
-    font-size: 16px;
-    border-radius: 3px;
-    border: 1px solid orange;
-    border: none;
-    outline: none;
-    border-bottom: 2px solid white;
-    color: #fff;
-    font-family: sans-serif;
-    background: #33a2bd;
-}
+            #inputs2 {
+                margin-bottom: 15px;
+                padding: 15px;
+                font-size: 16px;
+                border-radius: 3px;
+                border: 1px solid orange;
+                border: none;
+                outline: none;
+                border-bottom: 2px solid white;
+                color: #fff;
+                font-family: sans-serif;
+                background: #33a2bd;
+            }
 
-.btn-submit2 {
-    color: #fff;
-    font-family: sans-serif;
-    margin: auto;
-    padding: 10px 40px;
-    font-size: 17px;
-    transition: all .3s ease;
-    cursor: pointer;
-    background: #154360;
-    border: none;
-    outline: none;
-}
+            .btn-submit2 {
+                color: #fff;
+                font-family: sans-serif;
+                margin: auto;
+                padding: 10px 40px;
+                font-size: 17px;
+                transition: all .3s ease;
+                cursor: pointer;
+                background: #154360;
+                border: none;
+                outline: none;
+            }
 
-.btn-submit2:hover {
-    background: #f29718;
-    border: groove darkgoldenrod;
-}
+            .btn-submit2:hover {
+                background: #f29718;
+                border: groove darkgoldenrod;
+            }
         </style>
 
     </head>
@@ -131,7 +131,7 @@
                 </div>
             </nav>
 
-            <header id="gtco-header" class="gtco-cover gtco-cover-xs gtco-inner" role="banner" style="height: 300px">
+            <header id="gtco-header" class="gtco-cover gtco-cover-xs gtco-inner" role="banner" style="height: 400px">
                 <div class="gtco-container">
                     <div class="row">
                         <div class="col-md-12 col-md-offset-0 text-left">
@@ -139,7 +139,7 @@
                                 <div class="display-tc">
                                     <div class="row">
                                         <div class="col-md-8 animate-box">
-                                            <h1 class="no-margin" style="position: relative; bottom: -70px; left: 40px;"><strong>Añadir a un familiar</strong></h1>
+                                            <h1 class="no-margin" style="position: relative; bottom: -120px; left: 40px;"><strong>Añadir a un familiar</strong></h1>
                                         </div>
                                     </div>
                                 </div>
@@ -149,28 +149,28 @@
                 </div>
             </header>
             <!-- END #gtco-header -->
-
+            <div class="espacio">
+                <h3  class="espacio" style="text-aling: center">Para añadir a tu familiar, ingresa los siguientes datos</h3>
+            </div>
             <div class="gtco-section">
                 <div class="gtco-container">
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2 gtco-heading text-center">
                             <div>
-                                <div class="espacio">
-                                    <h3  class="espacio" style="text-aling: center">Para añadir a tu familiar, ingresa los siguientes datos</h3>
-                                </div>
+
                                 <form id="form-lora" action="ControladorFa" method="POST">
                                     <h2 class="form-title2"><span>Añadir familiar</span></h2>
                                     <div class="contenedor-inputs">
                                         <input type="text" id="inputs2" class="form-input" placeholder="Identificación de tu familiar" required name="txtidf">
                                         <input type="text" id="inputs2" class="form-input" placeholder="Tu identificación" required name="txtid">
                                         <select name="txtcargo" id="inputs2" class="form-input" required>
-                                                <option disabled selected>Selecciona un parentesco</option>
-                                                <option value="1">Hijo/a</option> 
-                                                <option value="2">Nieto/a</option>
-                                                <option value="1">Sobrino/a</option> 
-                                                <option value="2">Primo/a</option>
-                                                <option value="1">Amigo/a</option> 
-                                                <option value="2">Otro</option>
+                                            <option disabled selected>Selecciona un parentesco</option>
+                                            <option value="1">Hijo/a</option> 
+                                            <option value="2">Nieto/a</option>
+                                            <option value="1">Sobrino/a</option> 
+                                            <option value="2">Primo/a</option>
+                                            <option value="1">Amigo/a</option> 
+                                            <option value="2">Otro</option>
                                         </select>
                                         <input type="submit" class="btn-submit2" value="Añadir" name="accion">
                                     </div>
